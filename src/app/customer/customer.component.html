@@ -1,0 +1,37 @@
+<mat-toolbar>
+    <span>
+        Clientes
+    </span>
+</mat-toolbar>
+<form [formGroup]="addCustomer" (ngSubmit)="SaveData()">
+    <mat-form-field class="full-width">
+        <mat-label>Primeiro Nome: </mat-label>
+        <input type="text" matInput placeholder="Digite seu primeiro nome"  formControlName="nome"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Último Nome: </mat-label>
+        <input type="text" matInput placeholder="Digite seu último nome" formControlName="ultimoNome"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>CPF: </mat-label>
+        <input type="text" matInput placeholder="Digite seu CPF" formControlName="cpf"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Data de Nascimento: </mat-label>
+        <input type="date" matInput placeholder="Digite sua data de nascimento" formControlName="dataNascimento"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Renda Mensal: R$ </mat-label>
+        <input type="number" matInput placeholder="Digite sua renda mensal (R$)" formControlName="rendaMensal"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Email: </mat-label>
+        <input type="email" matInput placeholder="Digite seu email" formControlName="email"/>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Senha: </mat-label>
+        <input type="password" matInput placeholder="Digite sua senha" formControlName="senha" />
+    </mat-form-field>
+    <button mat-raised-button color="primary">Salvar</button>
+    <button type="reset" mat-raised-button id="btnclear">Limpar</button>
+</form>
